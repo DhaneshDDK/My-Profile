@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>   
+    
+    <link rel="icon" href="/assets/Logo-ddf6c30f.png">
+    
+  <link rel="stylesheet" href="/assets/index-7973b3c3.css">
+</head>
+<body>
+     
+    <div class="relative w-[100%] h-[100vh] bg-black flex justify-center overflow-hidden">
+        
+        <div class="absolute top-[5%] left-[27%] w-[11em] h-[11em] rounded-full circle1"></div>
+        <div class="circle2"></div>
+        <div class="w-[100vw] h-[100vh] flex justify-center items-center wrapper">
+             <div class="card-wrapper flex flex-col justify-evenly items-center gap-5 h-[450px] border-solid border-[2px] border-[#ffffff30] 
+             bg-[#ffffff1a] backdrop-opacity-60 px-8 py-4 rounded-xl">
+                <img class=" border-solid border-[2px] border-[#ffffff30] rounded-full h-[200px]" src="/assets/myImage-7f1b44aa.png" alt="">
+                <h2 class="text-[#ffffffc4] text-[1.4em] username">Dhanesh Kumar, Tech Enthusiast</h2>
+                <div class="flex gap-3 justify-center bottom-group">
+                    <button onclick="openModal()" class=" px-3 py-3 bg-[#ffffff00] border-[2px] border-solid border-[#ffffff30] capitalize rounded-lg
+                     text-[#ffffffb9] cursor-pointer hover:text-blue-400 hover:scale-105 transition-all duration-200 ease-in-out">
+                            <i class="fa-solid fa-share"></i><span>  Share My Profile</span>
+                    </button>
+                    <button class="button  text-white py-3 px-8 bg-[#ffffff00] border-[2px] border-solid border-[#ffffff30] capitalize rounded-lg
+                    text-[#ffffffb9] cursor-pointer hover:text-blue-400 hover:scale-105 transition-all duration-200 ease-in-out">Follow Me</button>
+                </div>
+             </div>
+        </div>
+
+        <!--Modal section-->
+        <div class="modal ">
+            <div class="flex justify-between items-center pb-[12px] mb-6 border-b-[1px] border-solid border-b-[#ffffff88]">
+                <h1 id="share" class="text-white text-[25px]">Share My Profile</h1>
+                <div onclick="closeModal()" class="text-white cursor-pointer text-[23px]"><i class="fa-solid fa-xmark close"></i></div>
+            </div>
+            <div class=" text-[23px] text-[#ffffff94]">Share Via</div>
+
+            <div class="flex flex-row flex-wrap text-white justify-evenly mt-[20px]">
+                <a href="https://www.facebook.com/profile.php?id=100079241538210" id="facebook" class="icon border-[1px] border-solid border-[#1771e6] text-[#1771e6]"><i  class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/dande_dhanesh" id="twitter" class="icon border-[1px] border-solid border-[#1c99e6] text-[#1c99e6]"><i  class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/dhanesh_901/?next=%2F" id="instagram" class="icon border-[1px] border-solid border-[#cb2770] text-[#cb2770]"><i  class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/9381263541" id="whatsapp" class="icon border-[1px] border-solid border-[#2fe664] text-[#2fe664]"><i  class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://web.telegram.org/k/" id="telegram" class="icon border-[1px] border-solid border-[#0081c2] text-[#0081c2]"><i  class="fa-brands fa-telegram"></i></a>
+            </div>
+
+        </div>
+
+        <div onclick="closeModal()" class="overlay"></div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/f776c58278.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script>
+        const button = document.querySelector(".button");
+  
+        button.addEventListener("click", (e) => {
+          e.preventDefault;
+          button.classList.add("animate");
+          setTimeout(() => {
+            button.classList.remove("animate");
+          }, 600);
+        });
+      </script>
+  
+</body>
+</html>
